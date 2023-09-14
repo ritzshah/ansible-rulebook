@@ -19,7 +19,7 @@ RUN pip install -U pip \
     && ansible-galaxy collection install ansible.eda
 
 RUN bash -c "if [ $DEVEL_COLLECTION_LIBRARY -ne 0 ]; then \
-    ansible-galaxy collection install git+https://github.com/ansible/event-driven-ansible.git --force; fi"
+    ansible-galaxy collection install git+https://github.com/ritzshah/event-driven-ansible.git --force; fi"
 
 COPY . $WORKDIR
 RUN chown -R $USER_ID ./
